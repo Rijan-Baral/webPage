@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color:#fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html body{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle{
+  pointer-events: none;
+  z-index: 5;
+  height: 20px;
+  width: 20px;
+  background-color: #fe001a;
+  position: fixed;
+  border-radius: 50%;
+}
+
+
+
+.nav{
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.nav h2{
+  font-size: 22px;
+  padding:0 30px;
+}
+.nav i{
+  font-size: 22px;
+  margin-right: 5px;
+}
+.nav-list{
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 60%;;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-right: 100px;
+}
+.line{
+border: 1px solid #fe001a ;
+width: 12%;
+}
+.nav-list img{
+  height: 100%;
+  width: 100px;
+}
+.search{
+  cursor: pointer;
+  padding: 0 30px;
+  font-size: 18px;
+}
+.hero{
+  height: calc(100vh - 70px);
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftright{
+  height: 100%;
+  width: 35%;
+  z-index:10;
+  background-color: transparent;
+}
+.left{
+padding: 150px 100px;
+}
+.left h3{
+ margin-bottom: 30px;
+ width: 90%;
+ font-size: 44px;
+ line-height: 49px;
+ 
+}
+.left span{
+ color:black;
+ font-weight: 300;
+ font-size: 50px;
+}
+.left p{
+ width: 70%;
+ margin-bottom: 30px;
+}
+.btn{
+ height: 40px;
+ width: 100px;
+ border-radius: 10px;
+ border-top-left-radius: 0;
+ background-color: #fe001a;
+ border-style: none;
+ cursor: pointer;
+ font-size: 15px;
+}
+.btn i{
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.btn:hover{
+  background-color:#b90114ea;
+}
+
+.centre{
+  height: 100%;
+  width: 30%;
+  padding: 60px 0;
+  position: relative;
+}
+
+.bg{
+  height: 100%;
+  background-color: black;
+  border-radius: 10px;
+/* border-top-left-radius: 1000px;
+border-top-right-radius: 1000px; */
+/* background-image: url(https://c0.wallpaperflare.com/preview/85/135/782/coca-cola-led-signage-thumbnail.jpg); */
+background-image: url(https://img.pikbest.com/wp/202343/overhead-perspective-of-textured-brown-wooden-table-surface_9978246.jpg!bw700);
+filter: blur(1px);
+background-size:cover;
+background-position: -140px;
+
+}
+.centre img{
+position:absolute;
+z-index: 20;
+height:500px;
+left: 50%;
+top:15%;
+transform: translateX(-50%);
+background: transparent;
+}
+
+.right{
+  display: block;
+  padding: 150px 130px;
+}
+
+
+.box{
+  height: 80px;
+  font-size: 22px;
+  border-bottom: 1px solid white;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.box:hover{
+  opacity: 1;
+}
+
+
+.ing{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  opacity: 0.6;
+
+}
+.ing h3{
+  font-size: 22px;
+  font-weight: 200px;
+  margin: 20px 0;
+}
+.ing p{
+margin-top: 10px;
+  font-size: 12px;
+}
+.ing:hover{
+  opacity: 1;
+}
+
+.section2{
+  height: 100vh;
+  background-color: black;
+
+}
+
+.section3{
+  height: 100vh;
+  background-color: black;
+}
