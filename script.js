@@ -1,8 +1,8 @@
 circle = document.querySelector(".circle");
 coke = document.querySelector(".coke");
 span = document.querySelector(".leftmost span");
-section = document.querySelector(".section-2");
 
+//function that makes the cirle follow the mouse pointer
 window.addEventListener("mousemove", function (dets) {
   gsap.to(circle, {
     x: dets.clientX,
@@ -11,11 +11,14 @@ window.addEventListener("mousemove", function (dets) {
   });
 });
 
+//scale the circle when it enters the span tag.
 span.addEventListener("mouseenter", function () {
   gsap.to(circle, {
     scale: 10,
   });
 });
+
+//convert the scale of the circle back to original/normal size when it leaves the span tag.
 span.addEventListener("mouseleave", function () {
   gsap.to(circle, {
     scale: 1,
@@ -25,27 +28,25 @@ span.addEventListener("mouseleave", function () {
   });
 });
 
-// const rot = function () {
-//   const scroll = window.scrollY;
-//   const rotate = scrollY * 1;
-//   gsap.to(coke, {
-//     rotation: rotate,
-//     duration: 1,
-//   });
-// };
-// window.addEventListener("scroll", rot);
-
+//rotation animation.
 const rotate = gsap.to(coke, {
   rotate: 360,
   duration: 5,
   repeat: -1,
   ease: "linear",
-  paused: true,
+  paused: true, //initially the bottle doesnot rotate
 });
+
+//resuming the rotation as soon as the mouse enters the image.
 coke.addEventListener("mouseenter", function (dets) {
   rotate.play();
 });
 
+//pausing the rotation as soon as the mouse leaves the image.
 coke.addEventListener("mouseleave", function (dets) {
   rotate.pause();
+});
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
 });
