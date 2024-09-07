@@ -1,6 +1,7 @@
 circle = document.querySelector(".circle");
 coke = document.querySelector(".coke");
 span = document.querySelector(".leftmost span");
+list = document.querySelector(".nav-list");
 
 //function that makes the cirle follow the mouse pointer
 window.addEventListener("mousemove", function (dets) {
@@ -22,9 +23,6 @@ span.addEventListener("mouseenter", function () {
 span.addEventListener("mouseleave", function () {
   gsap.to(circle, {
     scale: 1,
-  });
-  gsap.to(".left span", {
-    color: "black",
   });
 });
 
@@ -49,4 +47,25 @@ coke.addEventListener("mouseleave", function (dets) {
 
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
+});
+
+//nav elements circle hover effect
+list.addEventListener("mouseenter", function () {
+  gsap.to(circle, {
+    scale: 4,
+    color: "white",
+  });
+  gsap.to(".nav-list h5", {
+    color: "black",
+  });
+});
+
+list.addEventListener("mouseleave", function () {
+  gsap.to(circle, {
+    scale: 1,
+    color: "red",
+  });
+  gsap.to(".nav-list h5", {
+    color: "white",
+  });
 });
